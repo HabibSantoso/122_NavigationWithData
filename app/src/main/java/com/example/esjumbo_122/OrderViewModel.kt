@@ -32,6 +32,10 @@ class OrderViewModel : ViewModel(){
         _stateUI.value = OrderUIState()
     }
 
+    fun resetOrder() {
+        _stateUI.value = OrderUIState()
+    }
+
     private fun hitungHarga(
         jumlah: Int = _stateUI.value.jumlah
     ): String {
