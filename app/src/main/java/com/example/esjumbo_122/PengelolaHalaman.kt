@@ -35,7 +35,6 @@ enum class PengelolaHalaman {
 }
 
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun EsTehAppBar (
     bisaNavigasiBack:Boolean,
@@ -60,7 +59,6 @@ fun EsTehAppBar (
     )
 }
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun EsTehApp (
     viewModel: OrderViewModel = OrderViewModel(),

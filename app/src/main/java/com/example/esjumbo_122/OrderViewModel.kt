@@ -32,6 +32,15 @@ class OrderViewModel : ViewModel(){
         _stateUI.value = OrderUIState()
     }
 
+    fun setContac(listData: MutableList<String>){
+        _stateUI.update { statesaatini ->
+            statesaatini.copy(
+                nama = listData[0],
+                alamat = listData[1],
+                telpon = listData[2]
+            )
+        }
+    }
 
     fun resetOrder() {
         _stateUI.value = OrderUIState()
