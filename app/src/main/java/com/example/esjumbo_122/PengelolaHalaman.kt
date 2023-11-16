@@ -80,7 +80,7 @@ fun EsTehApp (
             composable(route = PengelolaHalaman.Home.name) {
                 HalamanHome (
                     onNextButtonClicked = {
-                        navController.navigate(PengelolaHalaman.Rasa.name) })
+                        navController.navigate(PengelolaHalaman.Formulir.name) })
             }
             composable(route = PengelolaHalaman.Formulir.name) {
                 HalamanForm(
