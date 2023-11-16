@@ -85,6 +85,7 @@ fun EsTehApp (
             composable(route = PengelolaHalaman.Formulir.name) {
                 HalamanForm(
                     onClickSubmitButton = {
+                        viewModel.setContac(it)
                         navController.navigate(PengelolaHalaman.Rasa.name)
                     })
             }
