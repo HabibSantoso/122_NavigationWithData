@@ -29,6 +29,7 @@ import com.example.esteh.theme.HalamanDua
 
 enum class PengelolaHalaman {
     Home,
+    Formulir,
     Rasa,
     Summary
 }
@@ -80,6 +81,12 @@ fun EsTehApp (
                 HalamanHome (
                     onNextButtonClicked = {
                         navController.navigate(PengelolaHalaman.Rasa.name) })
+            }
+            composable(route = PengelolaHalaman.Formulir.name) {
+                HalamanForm(
+                    onClickSubmitButton = {
+                        navController.navigate(PengelolaHalaman.Rasa.name)
+                    })
             }
             composable(route = PengelolaHalaman.Rasa.name) {
                 val  context = LocalContext.current
