@@ -29,6 +29,7 @@ import androidx.compose.ui.unit.dp
 
 @Composable
 fun HalamanForm(
+    onCancelButtonClicked: () -> Unit,
     onClickSubmitButton: (MutableList<String>) -> Unit
 ) {
     var nameTxt by rememberSaveable {
@@ -84,7 +85,7 @@ fun HalamanForm(
             horizontalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.padding_medium)),
             verticalAlignment = Alignment.Bottom
         ) {
-            Button(modifier = Modifier.weight(1f), onClick = {onClickSubmitButton(listDataTxt)}) {
+            Button(modifier = Modifier.weight(1f), onClick = onCancelButtonClicked) {
                 Text(text = stringResource(id = R.string.cancel))
             }
             Button(
@@ -100,5 +101,5 @@ fun HalamanForm(
 @Preview(showBackground = true)
 @Composable
 fun HalamanformPreview() {
-    HalamanForm(onClickSubmitButton = {})
+    HalamanForm(onClickSubmitButton = {}, onCancelButtonClicked = {})
 }

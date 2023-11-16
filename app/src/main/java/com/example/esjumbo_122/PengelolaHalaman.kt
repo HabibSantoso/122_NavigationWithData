@@ -84,6 +84,7 @@ fun EsTehApp (
             }
             composable(route = PengelolaHalaman.Formulir.name) {
                 HalamanForm(
+                    onCancelButtonClicked = { cancelFormAndNavigateToHome(navController) },
                     onClickSubmitButton = {
                         viewModel.setContac(it)
                         navController.navigate(PengelolaHalaman.Rasa.name)
@@ -117,6 +118,12 @@ private fun cancelOrderAndNavigateToHome(
     navController: NavHostController
 ) {
     viewModel.resetOrder()
+    navController.popBackStack(PengelolaHalaman.Home.name, inclusive = false)
+}
+
+private  fun cancelFormAndNavigateToHome(
+    navController: NavHostController
+){
     navController.popBackStack(PengelolaHalaman.Home.name, inclusive = false)
 }
 
