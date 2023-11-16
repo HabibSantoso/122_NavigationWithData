@@ -37,7 +37,7 @@ fun HalamanHome(
     val image = painterResource(id = R.drawable.esjumbo)
     Column (
         modifier = Modifier,
-        verticalArrangement = Arrangement.SpaceBetween
+        verticalArrangement = Arrangement.spacedBy(16.dp)
     ){
         OutlinedCard (
             colors = CardDefaults.cardColors(
@@ -57,7 +57,7 @@ fun HalamanHome(
                     contentDescription = null,
                     contentScale = ContentScale.Crop
                 )
-                Text(text = "es teh",
+                Text(text = "Es Teh",
                     color = Color.DarkGray,
                     fontFamily = FontFamily.Cursive,
                     fontSize = 35.sp,
@@ -79,7 +79,7 @@ fun HalamanHome(
                 .padding(dimensionResource(R.dimen.padding_medium))
                 .weight(1f, false),
             horizontalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.padding_medium)),
-            verticalAlignment = Alignment.Bottom
+            verticalAlignment = Alignment.Top
         ){
             Button(
                 modifier = Modifier.weight(1f),
