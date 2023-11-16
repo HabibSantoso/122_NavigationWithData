@@ -52,7 +52,7 @@ fun HalamanForm(
     ) {
         OutlinedTextField(
             value = nameTxt,
-            label = { Text(text = stringResource(id = R.string.neme)) },
+            label = { Text(text = stringResource(id = R.string.name)) },
             onValueChange = {
                 nameTxt = it
             },
